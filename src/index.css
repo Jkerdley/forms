@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(31 31 31 / 0.87);
+  background-color: #f4f4f4;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,9 +18,140 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
+}
+
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #deeeec;
+  border-radius: 1rem;
+  padding: 4rem;
+  width: auto;
+  gap: 1rem;
+}
+
+.forms-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  color: #2d3748;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.text-input {
+  width: 100%;
+  padding: 0.5rem;
+  height: 1.5rem;
+  transition: border-color 0.2s;
+  color: #2d3748;
+}
+.input-classic {
+  border: 1px solid #e2e8f0;
+  background: #f4f4f4;
+}
+.input-bordered {
+  border: 1px solid #2d3748;
+  background: transparent;
+}
+.input-noborder {
+  background: transparent;
+  border: none;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #149e5e;
+  box-shadow: 0 0 0 3px rgba(20, 158, 94, 0.1);
+}
+
+.gender-inputs-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.input-noborder:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.submit-button {
+  max-width: 10rem;
+  height: 2rem;
+  padding-inline: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #149e5e;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.reset-button {
+  max-width: 10rem;
+  height: 2rem;
+  padding-inline: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #685d59;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.submit-button:hover {
+  background: #2cd284;
+  transform: translateY(-3px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.75rem;
+  margin-top: 0px;
+  margin-bottom: 0.75rem;
 }
